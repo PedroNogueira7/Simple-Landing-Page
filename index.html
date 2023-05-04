@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Landing Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/elements.css">
+    <link rel="stylesheet" href="css/classes.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <input type="checkbox" id="closeMenu" class="closeMenu" aria-label="Close Menu" role="button">
+    <label class="closeMenuLabel" for="closeMenu" title="Close Menu"></label>
+    <aside class="menu whiteBackground">
+        <div class="mainContent menuContent">
+            <h1 onclick="getElementById('closeMenu').checked = false;">
+                <a href="#home">LOGO</a>
+            </h1>
+
+            <nav>
+                <ul onclick="getElementById('closeMenu').checked = false;">
+                    <li><a href="#intro">Intro</a></li>
+                    <li><a href="#gridSection">Grid One</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#gridSection2">Grid Two</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+
+    <div class="menuSpacing"></div>
+
+    <section id="home" class="introduction mainBackground sec">
+        <div class="mainContent introContent">
+            <div class="introTxtContent">
+                <h2>January Bring Us Firefox 85</h2>
+                <p>To wrap up January, we are proud to bring you the release of Firefox 85. In this version we are
+                    bringing you
+                    support for the :focus-visible pseudo-class in CSS and associated devtools, and the complete removal
+                    of Flash
+                    support from Firefox.</p>
+            </div>
+            <div class="introImage">
+                <img src="img/undraw_astronaut_re_8c33.svg" alt="astronaut">
+            </div>
+        </div>
+    </section>
+
+    <section id="intro" class="whiteBackground sec">
+        <div class="mainContent top3Content">
+            <h2>:focus-visible</h2>
+            <p>The :focus-visible pseudo-class, previously supported in Firefox via the proprietary :-moz-focusring
+                pseudo-class,
+                allows the developer to apply styling to elements in cases where browsers use heuristics to determine
+                that focus should be made evident on the element.</p>
+            <p>The most obvious case is when you use the keyboard to focus an element such as a button or link. There
+                are often cases
+                where designers will want to get rid of the ugly focus-ring, commonly achieved using something like
+                :focus { outline: none }, but this causes problems for keyboard users, for whom the focus-ring is an
+                essential accessibility aid.</p>
+            <p>:focus-visible allows you to apply a focus-ring alternative style only when the element is focused using
+                the keyboard,
+                and not when it is clicked.</p>
+        </div>
+    </section>
+
+    <section id="gridSection" class="gridSection mainBackground sec">
+        <div class="mainContent gridSectionContent">
+            <h2 class="gridMainHeading">software development</h2>
+            <p class="gridDescription">Software development refers to a set of computer science activities dedicated to
+                the process of creating,
+                designing, deploying and supporting software.</p>
+            <div class="grid">
+                <article>
+                    <h3>Software developers</h3>
+                    <p>Software developers have a less formal role than engineers and can be closely involved with
+                        specific
+                        project areas — including writing code. At the same time, they drive the overall software
+                        development
+                        lifecycle — including working across functional teams to transform requirements into features,
+                        managing
+                        development teams and processes, and conducting software testing and maintenance.</p>
+                </article>
+                <article>
+                    <h3>Application software</h3>
+                    <p>Application software (applications or apps) to help users perform tasks. Office productivity
+                        suites,
+                        data management software, media players and security programs are examples. Applications also
+                        refers
+                        to web and mobile applications like those used to shop on Amazon.com, socialize with Facebook or
+                        post pictures to Instagram.</p>
+                </article>
+                <article>
+                    <h3>Software engineers</h3>
+                    <p>Software engineers apply engineering principles to build software and systems to solve problems.
+                        They use modeling language and other tools to devise solutions that can often be applied to
+                        problems
+                        in a general way, as opposed to merely solving for a specific instance or client. Software
+                        engineering
+                        solutions adhere to the scientific method and must work in the real world, as with bridges or
+                        elevators. Their responsibility has grown</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gridSection whiteBackground sec">
+        <div class="mainContent gridSectionContent">
+            <h2 class="gridMainHeading">Gallery</h2>
+            <p class="gridDescription">Random Images From Unsplash</p>
+            <div class="grid">
+                <div class="galleryImage">
+                    <img src="http://source.unsplash.com/random/360x360?r=1" alt="random image unsplash">
+                </div>
+                <div class="galleryImage">
+                    <img src="http://source.unsplash.com/random/360x360?r=2" alt="random image unsplash">
+                </div>
+                <div class="galleryImage">
+                    <img src="http://source.unsplash.com/random/360x360?r=3" alt="random image unsplash">
+                </div>
+                <div class="galleryImage">
+                    <img src="http://source.unsplash.com/random/360x360?r=4" alt="random image unsplash">
+                </div>
+                <div class="galleryImage">
+                    <img src="http://source.unsplash.com/random/360x360?r=5" alt="random image unsplash">
+                </div>
+                <div class="galleryImage">
+                    <img src="http://source.unsplash.com/random/360x360?r=6" alt="random image unsplash">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gridSection2" class="gridSection mainBackground sec">
+        <div class="mainContent gridSectionContent">
+            <h2 class="gridMainHeading">Java Topics</h2>
+            <p class="gridDescription">Technologies related to Java APIs</p>
+            <div class="grid">
+                <article>
+                    <h3>Core Java</h3>
+                    <p>Technologies related to Java APIs (application programming interfaces) and JDK (Java Development
+                        Kit)
+                        form the cornerstone of modern, enterprise-grade software development. Here we explore all the
+                        Java
+                        features that make the JVM great through programming tutorials, real-world code samples and
+                        expert
+                        opinions from Java champions. More about Core Java</p>
+                </article>
+                <article>
+                    <h3>Tools</h3>
+                    <p>Software developers build applications faster when they have the right tools. Review the
+                        essential
+                        tools every software developer needs, such as Git, Jenkins, IDEs such as Eclipse and build tools
+                        including Maven and Gradle. Also, gain insight into how AI and machine learning are pushing
+                        software
+                        development tool capabilities to new levels to help developers generate quality code. More about
+                        Tools</p>
+                </article>
+                <article>
+                    <h3>DevOps</h3>
+                    <p>It's time to embrace DevOps. A DevOps transition will make your development process and delivery
+                        pipelines faster, more reliable and more scalable. Learn how to automate, collaborate, monitor
+                        and optimize your enterprise with examples and tutorials on technologies like Jenkins, Docker,
+                        Kubernetes, Terraform, and other cloud-native tools and technologies. More about DevOps</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="whiteBackground sec">
+        <div class="mainContent top3Content">
+            <h2>Pricing</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque blanditiis officia eos, labore nemo nihil
+                laborum corrupti
+                debitis quasi, omnis nam voluptatum dolores earum aliquam consectetur ea, assumenda provident
+                accusantium!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas ipsa amet eum et eaque excepturi voluptas
+                explicabo porro
+                debitis recusandae similique temporibus eos fuga a nobis assumenda ipsam, ipsum quisquam!</p>
+            <div class="responsiveTable">
+                <table>
+                    <caption>Pricing Table</caption>
+
+                    <thead>
+                        <tr>
+                            <th>Title 1</th>
+                            <th>Title 2</th>
+                            <th>Title 3</th>
+                            <th>Title 4</th>
+                            <th>Title 5</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Content 1</td>
+                            <td>Content 2</td>
+                            <td>Content 3</td>
+                            <td>Content 4</td>
+                            <td>Content 5</td>
+                        </tr>
+                        <tr>
+                            <td>Content 1</td>
+                            <td>Content 2</td>
+                            <td>Content 3</td>
+                            <td>Content 4</td>
+                            <td>Content 5</td>
+                        </tr>
+                        <tr>
+                            <td>Content 1</td>
+                            <td>Content 2</td>
+                            <td>Content 3</td>
+                            <td>Content 4</td>
+                            <td>Content 5</td>
+                        </tr>
+                    </tbody>
+
+                    <tfoot>
+                        <tr>
+                            <td colspan="4" rowspan="4"></td>
+                            <td>Footer</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="introduction mainBackground sec">
+        <div class="mainContent introContent">
+            <div class="introTxtContent">
+                <h2>Contact me for support</h2>
+                <p>If you have any questions, send me a message.</p>
+            </div>
+            <div class="introImage">
+                <img src="img/undraw_mail_re_duel.svg" alt="astronaut">
+            </div>
+
+            <div class="contactForm">
+                <fieldset class="formGrid">
+                    <legend>Contact Me</legend>
+
+                    <div class="formGroup">
+                        <label for="firstName">
+                            First Name:
+                        </label>
+                        <input type="text" name="firstName" id="firstName" placeholder="Your Name">
+                    </div>
+
+                    <div class="formGroup">
+                        <label for="lastName">
+                            Last Name:
+                        </label>
+                        <input type="text" name="lastName" id="lastName" placeholder="Your Last Name">
+                    </div>
+
+                    <div class="formGroup">
+                        <label for="email">
+                            E-mail:
+                        </label>
+                        <input type="email" name="email" id="email" placeholder="Your Email">
+                    </div>
+
+                    <div class="formGroup fullWidth">
+                        <label for="message">
+                            Message:
+                        </label>
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Write Your Message"></textarea>
+                    </div>
+
+                    <div class="formGroup fullWidth">
+                        <button type="submit">Send Message</button>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer" class="footer whiteBackground">
+        <p><a href="https://www.instagram.com/pedr0.henrique7/" target="_blank">Feito Por Pedro Henrique &copy</a></p>
+    </footer>
+
+    <a class="backToTop" href="#home">➤</a>
+</body>
+
+</html>

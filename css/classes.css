@@ -1,0 +1,30 @@
+.menuSpacing {
+    height: 6.5rem;
+}
+
+.mainBackground {
+    background-image: url(../img/maindBackground.svg);
+    background-size: cover;
+    background-position: center center;
+    color: var(--white-color);
+}
+
+.whiteBackground {
+    background: var(--white-color);
+    color: var(--primary-color);
+}
+
+.mainContent {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 10rem var(--gap);
+}
+
+.sec {
+    min-height: 100vh;
+}
+
+body .fullWidth {
+    width: 100%;
+    flex: 1 1 100%;
+}

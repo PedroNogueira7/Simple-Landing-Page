@@ -1,0 +1,265 @@
+.introContent {
+    position: relative;
+    top: 7rem;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    align-items: center;
+    gap: var(--gap);
+    min-height: 100vh;
+}
+
+.introTxtContent, .introImage {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.introImage img {
+    max-width: 100%;
+    min-height: auto;
+}
+
+.top3Content {
+    text-align: center;
+    display: flex;
+    /*flex-flow: column wrap;*/
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    max-width: 64rem;
+    min-height: 100vh;
+}
+
+.gridSectionContent {
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.gridMainHeading {
+    margin-bottom: 1rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
+    counter-reset: gridCounter;
+}
+
+.grid h3 {
+    font-size: 3rem;
+    position: relative;
+    padding-left: 5rem;
+    padding-bottom: 2rem;
+}
+
+.grid h3::before {
+    counter-increment: gridCounter;
+    content: counter(gridCounter);
+    position: absolute;
+    font-size: 8rem;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    top: -4rem;
+    left: -2rem;
+    transform: rotate(5deg);
+}
+
+.gridDescription {
+    padding-bottom: 7rem;
+}
+
+.galleryImage {
+    width: 100%;
+    max-width: 36rem;
+    max-height: 36rem;
+    overflow: hidden;
+}
+
+.galleryImage img {
+    transition: all ease-in-out 300ms;
+
+}
+
+.galleryImage img:hover {
+    transform: rotate(5deg) scale(1.2) translate(-3%, 3%);
+}
+
+.responsiveTable {
+    overflow: hidden;
+    overflow-x: scroll;
+}
+
+.contactForm {
+    grid-column: span 2;
+}
+
+.contactForm .formGrid {
+    border: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--gap);
+}
+
+.formGrid legend {
+    font-style: italic;
+    font-size: 1.6rem;
+    margin-bottom: 3rem;
+}
+
+.formGroup {
+    flex: 1 1 32rem;
+}
+
+.formGroup label {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.formGroup input, .formGroup textarea {
+    border: none;
+    background: var(--white-color);
+    padding: 1.5rem 2rem;
+    font-size: 3rem;
+    width: 100%;
+    outline: none;
+}
+
+.formGroup input:focus, .formGroup textarea:focus {
+    box-shadow: 0 0 1.5rem 0.5rem var(--secondary-color);
+}
+
+.formGroup button {
+    border: 0.5rem solid var(--white-color);
+    background: none;
+    color: var(--white-color);
+    padding: 1.5rem 2rem;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+
+.formGroup button:hover {
+    background: var(--white-color);
+    color: var(--primary-color);
+}
+
+.formGroup ::placeholder {
+    color: var(--ligh-grey-color);
+}
+
+.footer {
+    text-align: center;
+    font-style: italic;
+    font-size: 1.8rem;
+}
+
+.footer a {
+    color: var(--primary-color);
+}
+
+.footer p {
+    margin: 0;
+    padding: 3rem;
+}
+
+.closeMenu {
+    display: none;
+}
+
+.backToTop {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--white-color);
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: var(--primary-color);
+    transform: rotate(-90deg);
+    border: 0.1rem solid var(--primary-color);
+}
+
+@media (max-width: 80rem) {
+    .introContent, .grid {
+        grid-template-columns: 1fr; 
+    }
+
+    .galleryImage {
+        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .galleryImage img {
+        width: 100%;
+    }
+
+    .gridSectionContent {
+        display: block;
+    }
+
+    .menu {
+        bottom: 0;
+        text-align: center;
+    }
+
+    .menuContent, .menuContent ul {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .menuContent {
+        height: 100vh;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .closeMenu {
+        position: fixed;
+        z-index: 2;
+        top: 0;
+        left: 0;
+    }
+
+    .closeMenuLabel::after {
+        content: "≡";
+        position: fixed;
+        z-index: 2;
+        top: 2rem;
+        right: 2rem;
+        background: var(--primary-color);
+        color: var(--white-color);
+        font-size: 3rem;
+        line-height: 3rem;
+        width: 3rem;
+        height: 3rem;
+        text-align: center;
+        padding: 0.5rem;
+        cursor: pointer;
+    }
+
+    .closeMenu:checked~.menu {
+        display: block;
+    }
+
+    .closeMenu:checked~.closeMenuLabel::after {
+        content: "×";
+    }
+
+    .menuSpacing {
+        display: none;
+    }
+
+    h1, h2 {
+        font-size: 3.5rem;
+    }
+}
